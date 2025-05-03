@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios - YG Gestiones Inmobiliarias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">YG</div>
+                <div class="logo-text">
+                    <span class="logo-title">Gestoria</span>
+                    <span class="logo-subtitle">Asesoria</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html" class="active">Servicios</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero-content">
+                <div class="services-hero-text">
+                    <div class="section-subtitle">Nuestros servicios</div>
+                    <h1>Soluciones profesionales para tus <span class="accent-text">trámites</span></h1>
+                    <p>Ofrecemos una amplia gama de servicios para facilitar tus gestiones administrativas, catastrales e inmobiliarias con la máxima eficiencia y profesionalismo.</p>
+                </div>
+                <div class="services-hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <p>Años de experiencia</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <p>Clientes satisfechos</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <p>Trámites realizados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services-hero-shape"></div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">¿Qué ofrecemos?</div>
+                <h2>Nuestros servicios principales</h2>
+                <p>Contamos con un equipo de profesionales especializados en diferentes áreas para brindarte la mejor atención y solución a tus necesidades.</p>
+            </div>
+
+            <div class="services-categories">
+                <div class="service-category active" data-category="all">Todos</div>
+                <div class="service-category" data-category="afip">AFIP</div>
+                <div class="service-category" data-category="catastrales">Catastrales</div>
+                <div class="service-category" data-category="automotor">Automotor</div>
+                <div class="service-category" data-category="internacionales">Internacionales</div>
+                <div class="service-category" data-category="municipales">Municipales</div>
+                <div class="service-category" data-category="jubilaciones">Jubilaciones</div>
+            </div>
+
+            <div class="services-container">
+                <!-- AFIP -->
+                <div class="service-item" data-type="afip" id="afip">
+                    <div class="service-item-content">
+                        <div class="service-item-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="service-item-text">
+                            <h3>AFIP</h3>
+                            <p>Gestiones relacionadas con el Monotributo y declaraciones personales.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i><span>Monotributo</span></li>
+                                <li><i class="fas fa-check"></i><span>Obras sociales</span></li>
+                                <li><i class="fas fa-check"></i><span>SIRADIG</span></li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="service-item-image">
+                        <img src="img/img1.jpeg" alt="Trámites AFIP">
+                    </div>
+                </div>
+            
+                <!-- Automotor -->
+                <div class="service-item" data-type="automotor" id="automotor">
+                    <div class="service-item-content">
+                        <div class="service-item-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="service-item-text">
+                            <h3>Automotor</h3>
+                            <p>Gestiones de vehículos y registros.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i><span>Infracciones</span></li>
+                                <li><i class="fas fa-check"></i><span>Informes de dominio</span></li>
+                                <li><i class="fas fa-check"></i><span>Transferencias</span></li>
+                                <li><i class="fas fa-check"></i><span>Patentes</span></li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="service-item-image">
+                        <img src="img/img1.jpeg" alt="Trámites Automotor">
+                    </div>
+                </div>
+            
+                <!-- Catastrales -->
+                <div class="service-item reverse" data-type="catastrales" id="catastrales">
+                    <div class="service-item-content">
+                        <div class="service-item-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="service-item-text">
+                            <h3>Catastrales</h3>
+                            <p>Gestiones sobre inmuebles y documentos territoriales.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i><span>Informes de dominio</span></li>
+                                <li><i class="fas fa-check"></i><span>Escrituras</span></li>
+                                <li><i class="fas fa-check"></i><span>Agrimensores</span></li>
+                                <li><i class="fas fa-check"></i><span>Actas de posesión</span></li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="service-item-image">
+                        <img src="img/img1.jpeg" alt="Trámites Catastrales">
+                    </div>
+                </div>
+            
+                <!-- Internacionales -->
+                <div class="service-item" data-type="internacionales" id="internacionales">
+                    <div class="service-item-content">
+                        <div class="service-item-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="service-item-text">
+                            <h3>Internacionales</h3>
+                            <p>Documentación para uso internacional.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i><span>Visas</span></li>
+                                <li><i class="fas fa-check"></i><span>Apostillas</span></li>
+                                <li><i class="fas fa-check"></i><span>Partidas de nacimiento</span></li>
+                                <li><i class="fas fa-check"></i><span>Partidas de bautismo</span></li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="service-item-image">
+                        <img src="img/img1.jpeg" alt="Trámites Internacionales">
+                    </div>
+                </div>
+            
+                <!-- Municipales -->
+                <div class="service-item reverse" data-type="municipales" id="municipales">
+                    <div class="service-item-content">
+                        <div class="service-item-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="service-item-text">
+                            <h3>Municipales</h3>
+                            <p>Trámites ante entidades municipales.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i><span>Deudas catastrales</span></li>
+                                <li><i class="fas fa-check"></i><span>Patentes</span></li>
+                                <li><i class="fas fa-check"></i><span>Informes</span></li>
+                                <li><i class="fas fa-check"></i><span>Planchetas</span></li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="service-item-image">
+                        <img src="img/img1.jpeg" alt="Trámites Municipales">
+                    </div>
+                </div>
+            
+                <!-- Jubilaciones -->
+                <div class="service-item" data-type="jubilaciones" id="jubilaciones">
+                    <div class="service-item-content">
+                        <div class="service-item-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="service-item-text">
+                            <h3>Jubilaciones</h3>
+                            <p>Trámites previsionales en ANSES e IPS.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i><span>Jubilaciones</span></li>
+                                <li><i class="fas fa-check"></i><span>Pensiones</span></li>
+                                <li><i class="fas fa-check"></i><span>ANSES</span></li>
+                                <li><i class="fas fa-check"></i><span>IPS</span></li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                        </div>
+                    </div>
+                    <div class="service-item-image">
+                        <img src="img/img1.jpeg" alt="Jubilaciones">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Nuestro proceso</div>
+                <h2>Cómo trabajamos</h2>
+                <p>Seguimos un proceso claro y eficiente para garantizar la mejor atención y resultados en todos tus trámites.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">01</div>
+                    <div class="process-step-content">
+                        <h3>Consulta inicial</h3>
+                        <p>Realizamos una evaluación detallada de tu situación y necesidades para ofrecerte la mejor solución.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">02</div>
+                    <div class="process-step-content">
+                        <h3>Recopilación de documentación</h3>
+                        <p>Te indicamos toda la documentación necesaria y te ayudamos a recopilarla de manera eficiente.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">03</div>
+                    <div class="process-step-content">
+                        <h3>Gestión del trámite</h3>
+                        <p>Nos encargamos de realizar todas las gestiones necesarias ante los organismos correspondientes.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">04</div>
+                    <div class="process-step-content">
+                        <h3>Seguimiento constante</h3>
+                        <p>Te mantenemos informado sobre el avance de tu trámite en todo momento.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="process-step-number">05</div>
+                    <div class="process-step-content">
+                        <h3>Entrega de resultados</h3>
+                        <p>Te entregamos toda la documentación y te explicamos los resultados obtenidos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <div class="logo-icon">YG</div>
+                            <div class="logo-text">
+                                <span class="logo-title">Gestiones</span>
+                                <span class="logo-subtitle">Inmobiliarias</span>
+                            </div>
+                        </div>
+                        <p>Somos un equipo de profesionales especializadas en gestiones y trámites administrativos, catastrales e inmobiliarios.</p>
+                        <div class="footer-social">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>Enlaces rápidos</h3>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="servicios.html">Servicios</a></li>
+                            <li><a href="nosotras.html">Nosotras</a></li>
+                            <li><a href="cursos.html">Cursos</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-services">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="#afip">Trámites AFIP</a></li>
+                            <li><a href="#automotor">Trámites Automotor</a></li>
+                            <li><a href="#catastrales">Trámites Catastrales</a></li>
+                            <li><a href="#internacionales">Trámites Internacionales</a></li>
+                            <li><a href="#municipales">Trámites Municipales</a></li>
+                            <li><a href="#jubilaciones">Jubilaciones y Pensiones</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3>Contacto</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Corrientes 1234, Piso 5, Oficina B, CABA</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+54 11 4567-8901</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@gestionesinmobiliarias.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Lun-Vie: 9:00 - 18:00, Sáb: 9:00 - 13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Gestiones Inmobiliarias. Todos los derechos reservados.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
