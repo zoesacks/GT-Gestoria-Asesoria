@@ -290,58 +290,93 @@ nav {
     padding: 8rem 0 5rem;
     background-color: var(--light-gray);
     overflow: hidden;
-}
-
-.hero-content {
+  }
+  
+  .hero-content {
     position: relative;
     z-index: 2;
-}
-
-.hero-content .container {
+  }
+  
+  .hero-content .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-}
-
-.hero-text h1 {
+  }
+  
+  /* Color dorado para elementos destacados */
+  :root {
+    --golden-color: #d4af37; /* Color dorado */
+  }
+  
+  .hero-text h1 {
     font-family: var(--heading-font);
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: var(--black);
-}
-
-.hero-text p {
+    color: var(--golden-color); /* Todo el h1 en dorado */
+  }
+  
+  .hero-text p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    max-width: 500px;
-}
-
-.hero-buttons {
+    max-width: 80%; /* Limitamos el ancho para que no llegue al hero shape */
+    color: var(--black);
+  }
+  
+  .hero-buttons {
     display: flex;
     gap: 1rem;
-}
-
-.hero-image-container {
+  }
+  
+  /* Estilo para el botón primario */
+  .btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  /* Estilo para el botón outline (dorado) */
+  .btn-outline {
+    background-color: transparent;
+    color: var(--golden-color);
+    border: 2px solid var(--golden-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover para el botón outline */
+  .btn-outline:hover {
+    background-color: var(--golden-color);
+    color: var(--white);
+  }
+  
+  .hero-image-container {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
-}
-
-.hero-image-container img {
+  }
+  
+  .hero-image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.hero-badge {
+  }
+  
+  .hero-badge {
     position: absolute;
     bottom: 30px;
     right: -20px;
-    background-color: var(--accent-color);
+    background-color: var(--golden-color); /* Cambiamos a dorado */
     color: var(--white);
     padding: 1rem;
     border-radius: 50%;
@@ -353,20 +388,20 @@ nav {
     justify-content: center;
     text-align: center;
     box-shadow: var(--box-shadow);
-}
-
-.hero-badge span {
+  }
+  
+  .hero-badge span {
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 1;
-}
-
-.hero-badge p {
+  }
+  
+  .hero-badge p {
     font-size: 0.8rem;
     margin: 0;
-}
-
-.hero-shape {
+  }
+  
+  .hero-shape {
     position: absolute;
     top: 0;
     right: 0;
@@ -375,8 +410,107 @@ nav {
     background-color: var(--black);
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
     z-index: 1;
-}
-
+  }
+  
+  /* Media queries para dispositivos móviles - manteniendo el layout de dos columnas */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 6rem 0 4rem;
+    }
+  
+    .hero-content .container {
+      /* Mantenemos las dos columnas pero reducimos el gap */
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 0.9rem;
+      max-width: 95%;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+  
+    .btn-primary,
+    .btn-outline {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .hero-image-container {
+      max-height: 350px;
+    }
+  
+    .hero-badge {
+      width: 70px;
+      height: 70px;
+      bottom: 15px;
+      right: -10px;
+    }
+  
+    .hero-badge span {
+      font-size: 1.3rem;
+    }
+  
+    .hero-badge p {
+      font-size: 0.6rem;
+    }
+  }
+  
+  /* Para dispositivos muy pequeños */
+  @media (max-width: 480px) {
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+  
+    .hero-content .container {
+      /* Mantenemos las dos columnas pero con menos espacio */
+      gap: 0.5rem;
+    }
+  
+    .hero-text h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+  
+    .hero-text p {
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    .btn-primary,
+    .btn-outline {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+  
+    .hero-image-container {
+      max-height: 250px;
+    }
+  
+    .hero-badge {
+      width: 60px;
+      height: 60px;
+      padding: 0.5rem;
+    }
+  
+    .hero-badge span {
+      font-size: 1.1rem;
+    }
+  
+    .hero-badge p {
+      font-size: 0.5rem;
+    }
+  }
+  
 /* Features Section */
 .features-section {
     padding: 5rem 0;
@@ -2264,6 +2398,9 @@ footer {
     .courses-countdown {
         justify-content: center;
     }
+    .hero p{
+        padding-right: 40%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -2282,6 +2419,10 @@ footer {
     
     .registration-text h2 {
         font-size: 2rem;
+    }
+
+    .hero p{
+        padding-right: 40%;
     }
 }
 
