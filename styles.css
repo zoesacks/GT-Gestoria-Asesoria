@@ -290,6 +290,7 @@ nav {
     padding: 8rem 0 5rem;
     background-color: var(--light-gray);
     overflow: hidden;
+    height: 80vh; /* Hace que cubra toda la pantalla */
   }
   
   .hero-content {
@@ -358,48 +359,25 @@ nav {
     background-color: var(--golden-color);
     color: var(--white);
   }
+
+  .hero-image-container img {
+    width: 60%;
+    height: 80%;
+    object-fit: cover;
+    display: block;
+}
+
   
   .hero-image-container {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
-  }
-  
-  .hero-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .hero-badge {
-    position: absolute;
-    bottom: 30px;
-    right: -20px;
-    background-color: var(--golden-color); /* Cambiamos a dorado */
-    color: var(--white);
-    padding: 1rem;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    height: 100%; /* o una altura fija como 400px */
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-  }
-  
-  .hero-badge span {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1;
-  }
-  
-  .hero-badge p {
-    font-size: 0.8rem;
-    margin: 0;
-  }
+    align-items: center;
+    }
   
   .hero-shape {
     position: absolute;
@@ -446,23 +424,9 @@ nav {
     }
   
     .hero-image-container {
-      max-height: 350px;
+      height: 450px;
     }
   
-    .hero-badge {
-      width: 70px;
-      height: 70px;
-      bottom: 15px;
-      right: -10px;
-    }
-  
-    .hero-badge span {
-      font-size: 1.3rem;
-    }
-  
-    .hero-badge p {
-      font-size: 0.6rem;
-    }
   }
   
   /* Para dispositivos muy pequeños */
@@ -494,20 +458,6 @@ nav {
   
     .hero-image-container {
       max-height: 250px;
-    }
-  
-    .hero-badge {
-      width: 60px;
-      height: 60px;
-      padding: 0.5rem;
-    }
-  
-    .hero-badge span {
-      font-size: 1.1rem;
-    }
-  
-    .hero-badge p {
-      font-size: 0.5rem;
     }
   }
   
