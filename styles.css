@@ -1035,6 +1035,9 @@ footer {
     margin-right: 1rem;
     min-width: 20px;
 }
+.footer-contact i {
+    margin-top: 2%;
+}
 
 .footer-bottom {
     padding: 1.5rem 0;
@@ -1064,6 +1067,13 @@ footer {
     color: var(--accent-color);
 }
 
+.footer-social {
+    display: flex;
+    justify-content: flex-start; /* o flex-start / flex-end según prefieras */
+    align-items: center;
+    gap: 15px; /* espacio entre los íconos */
+    margin-top: 20px;
+}
 /* Responsive Styles */
 @media screen and (max-width: 992px) {
     .hero-content .container,
