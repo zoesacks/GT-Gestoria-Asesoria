@@ -394,7 +394,8 @@ nav {
   @media (max-width: 768px) {
     .hero {
       padding: 6rem 0 4rem;
-    }
+        height: 100vh; /* Hace que cubra toda la pantalla */
+  }
   
     .hero-content .container {
       /* Mantenemos las dos columnas pero reducimos el gap */
