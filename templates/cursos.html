@@ -1,0 +1,106 @@
+{% extends 'index.html' %}
+{%load static%}
+
+{% block links%}
+    <li><a href="{% url 'home' %}">Inicio</a></li>
+    <li><a href="{% url 'servicios' %}">Servicios</a></li>
+    <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+    <li><a href="{% url 'cursos' %}" class="active">Cursos</a></li>
+    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+{% endblock %}
+
+{% block content %}
+
+    <!-- Courses Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <div class="courses-hero-content">
+                <div class="courses-hero-text">
+                    <div class="section-subtitle">Capacitación profesional</div>
+                    <h1>Nuestros <span class="accent-text">cursos</span> estarán disponibles próximamente</h1>
+                    <p>Estamos preparando una serie de cursos especializados para compartir nuestro conocimiento y experiencia en el sector inmobiliario y de gestiones administrativas.</p>
+                    <div class="courses-countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number">30</span>
+                            <span class="countdown-label">Días</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">12</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">45</span>
+                            <span class="countdown-label">Minutos</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">20</span>
+                            <span class="countdown-label">Segundos</span>
+                        </div>
+                    </div>
+                    <a href="#registro" class="btn btn-primary">Registrarme ahora</a>
+                </div>
+                <div class="courses-hero-image">
+                    <img src="{% static 'img/logo.png' %}" alt="Cursos de Gestiones Inmobiliarias">
+                    <div class="courses-hero-badge">
+                        <span>Próximamente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Registration Section -->
+    <section class="registration-section" id="registro">
+        <div class="container">
+            <div class="registration-content">
+                <div class="registration-text">
+                    <div class="section-subtitle">Regístrate ahora</div>
+                    <h2>Sé el primero en enterarte</h2>
+                    <p>Completa el formulario y recibe información exclusiva sobre el lanzamiento de nuestros cursos, descuentos especiales y contenido relacionado.</p>
+                    
+                    <div class="registration-benefits">
+                        <div class="registration-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Notificación anticipada de lanzamientos</span>
+                        </div>
+                        <div class="registration-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Descuentos exclusivos para registrados</span>
+                        </div>
+                        <div class="registration-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Contenido gratuito relacionado</span>
+                        </div>
+                        <div class="registration-benefit">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Invitación a eventos y webinars</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="registration-form-container">
+                    <form id="registration-form" class="registration-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Registrarme</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

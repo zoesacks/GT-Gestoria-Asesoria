@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G|T Soluciones profesionales para tus trámites</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">G|T</div>
+                <div class="logo-text">
+                    <span class="logo-title">Gonzalez - Tapia</span>
+                    <span class="logo-subtitle">GESTORIA - ASESORIA</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    {% block links%}
+                    <li><a href="{% url 'home' %}" class="active">Inicio</a></li>
+                    <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                    <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                    <li><a href="{% url 'cursos' %}">Cursos</a></li>
+                    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                    {% endblock %}
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}
+        <!-- El contenido específico de cada página irá aquí -->
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <div class="logo-icon">G|T</div>
+                            <div class="logo-text">
+                                <span class="logo-title">Gonzalez - Tapia</span>
+                                <span class="logo-subtitle">GESTORIA - ASESORIA</span>
+                            </div>
+                        </div>
+                        <p>Somos un equipo de profesionales especializadas en gestiones y trámites administrativos, catastrales e inmobiliarios.</p>
+                        <div class="footer-social">
+                            <!-- <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a> -->
+                            <a href="https://www.instagram.com/gestiones.gonzalez.tapia?igsh=MW4ycjEzbmhleG93YQ==" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/5491172038801" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>Enlaces rápidos</h3>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Inicio</a></li>
+                            <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                            <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+                            <li><a href="{% url 'cursos' %}">Cursos</a></li>
+                            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-services">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li><a href="{% url 'servicios' %}#afip">Trámites AFIP</a></li>
+                            <li><a href="{% url 'servicios' %}#automotor">Trámites Automotor</a></li>
+                            <li><a href="{% url 'servicios' %}#catastrales">Trámites Catastrales</a></li>
+                            <li><a href="{% url 'servicios' %}#internacionales">Trámites Internacionales</a></li>
+                            <li><a href="{% url 'servicios' %}#municipales">Trámites Municipales</a></li>
+                            <li><a href="{% url 'servicios' %}#jubilaciones">Jubilaciones y Pensiones</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3>Contacto</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>San Blas 30, B1631LCB Villa Rosa, Provincia de Buenos Aires</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+54 9 11 7203-8801 (Yesica)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+54 9 11 3854-9967 (Mariela)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>gestiones.gonzaleztapia@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Lun-Sáb: 9:00 - 18:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <a href="https://www.sacksverse.com.ar/">&copy; SacksVerse. Todos los derechos reservados.</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+    {% block extra_scripts %}
+        <!-- Scripts adicionales específicos de cada página -->
+    {% endblock %}
+
+</body>
+
+</html>

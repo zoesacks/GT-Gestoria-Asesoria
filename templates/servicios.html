@@ -1,42 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Servicios - G|T Gestiones Inmobiliarias</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <div class="logo-icon">G|T</div>
-                <div class="logo-text">
-                    <span class="logo-title">Gonzalez - Tapia</span>
-                    <span class="logo-subtitle">GESTORIA - ASESORIA</span>
-                </div>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html" class="active">Servicios</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+{% extends 'index.html' %}
+{%load static%}
+
+{% block links%}
+    <li><a href="{% url 'home' %}">Inicio</a></li>
+    <li><a href="{% url 'servicios' %}" class="active">Servicios</a></li>
+    <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
+    <li><a href="{% url 'cursos' %}">Cursos</a></li>
+    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+{% endblock %}
+
+{% block content %}
 
     <!-- Services Hero Section -->
     <section class="services-hero">
@@ -100,11 +73,11 @@
                                 <li><i class="fas fa-check"></i><span>Obras sociales</span></li>
                                 <li><i class="fas fa-check"></i><span>SIRADIG</span></li>
                             </ul>
-                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                            <a href="{% url 'contacto' %}" class="btn btn-primary">Consultar</a>
                         </div>
                     </div>
                     <div class="service-item-image">
-                        <img src="img/afip.png" alt="Trámites AFIP">
+                        <img src="{% static 'img/afip.png' %}" alt="Trámites AFIP">
                     </div>
                 </div>
             
@@ -123,11 +96,11 @@
                                 <li><i class="fas fa-check"></i><span>Transferencias</span></li>
                                 <li><i class="fas fa-check"></i><span>Patentes</span></li>
                             </ul>
-                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                            <a href="{% url 'contacto' %}" class="btn btn-primary">Consultar</a>
                         </div>
                     </div>
                     <div class="service-item-image">
-                        <img src="img/automotor.png" alt="Trámites Automotor">
+                        <img src="{% static 'img/automotor.png' %}" alt="Trámites Automotor">
                     </div>
                 </div>
             
@@ -146,11 +119,11 @@
                                 <li><i class="fas fa-check"></i><span>Agrimensores</span></li>
                                 <li><i class="fas fa-check"></i><span>Actas de posesión</span></li>
                             </ul>
-                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                            <a href="{% url 'contacto' %}" class="btn btn-primary">Consultar</a>
                         </div>
                     </div>
                     <div class="service-item-image">
-                        <img src="img/catastrales.png" alt="Trámites Catastrales">
+                        <img src="{% static 'img/catastrales.png' %}" alt="Trámites Catastrales">
                     </div>
                 </div>
             
@@ -169,11 +142,11 @@
                                 <li><i class="fas fa-check"></i><span>Partidas de nacimiento</span></li>
                                 <li><i class="fas fa-check"></i><span>Partidas de bautismo</span></li>
                             </ul>
-                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                            <a href="{% url 'contacto' %}" class="btn btn-primary">Consultar</a>
                         </div>
                     </div>
                     <div class="service-item-image">
-                        <img src="img/internacionales.png" alt="Trámites Internacionales">
+                        <img src="{% static 'img/internacionales.png' %}" alt="Trámites Internacionales">
                     </div>
                 </div>
             
@@ -192,11 +165,11 @@
                                 <li><i class="fas fa-check"></i><span>Informes</span></li>
                                 <li><i class="fas fa-check"></i><span>Planchetas</span></li>
                             </ul>
-                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                            <a href="{% url 'contacto' %}" class="btn btn-primary">Consultar</a>
                         </div>
                     </div>
                     <div class="service-item-image">
-                        <img src="img/municipales.png" alt="Trámites Municipales">
+                        <img src="{% static 'img/municipales.png' %}" alt="Trámites Municipales">
                     </div>
                 </div>
             
@@ -215,11 +188,11 @@
                                 <li><i class="fas fa-check"></i><span>ANSES</span></li>
                                 <li><i class="fas fa-check"></i><span>IPS</span></li>
                             </ul>
-                            <a href="#contacto" class="btn btn-primary">Consultar</a>
+                            <a href="{% url 'contacto' %}" class="btn btn-primary">Consultar</a>
                         </div>
                     </div>
                     <div class="service-item-image">
-                        <img src="img/img1.jpeg" alt="Jubilaciones">
+                        <img src="{% static 'img/img1.jpeg' %}" alt="Jubilaciones">
                     </div>
                 </div>
             </div>
@@ -280,88 +253,4 @@
         </div>
     </section>
 
-   
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-about">
-                        <div class="footer-logo">
-                            <div class="logo-icon">G|T</div>
-                            <div class="logo-text">
-                                <span class="logo-title">Gonzalez - Tapia</span>
-                                <span class="logo-subtitle">GESTORIA - ASESORIA</span>
-                            </div>
-                        </div>
-                        <p>Somos un equipo de profesionales especializadas en gestiones y trámites administrativos, catastrales e inmobiliarios.</p>
-                        <div class="footer-social">
-                            <!-- <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a> -->
-                            <a href="https://www.instagram.com/gestiones.gonzalez.tapia?igsh=MW4ycjEzbmhleG93YQ==" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="https://wa.me/5491172038801" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-links">
-                        <h3>Enlaces rápidos</h3>
-                        <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="servicios.html">Servicios</a></li>
-                            <li><a href="nosotros.html">Nosotros</a></li>
-                            <li><a href="cursos.html">Cursos</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-services">
-                        <h3>Servicios</h3>
-                        <ul>
-                            <li><a href="servicios.html#afip">Trámites AFIP</a></li>
-                            <li><a href="servicios.html#automotor">Trámites Automotor</a></li>
-                            <li><a href="servicios.html#catastrales">Trámites Catastrales</a></li>
-                            <li><a href="servicios.html#internacionales">Trámites Internacionales</a></li>
-                            <li><a href="servicios.html#municipales">Trámites Municipales</a></li>
-                            <li><a href="servicios.html#jubilaciones">Jubilaciones y Pensiones</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-contact">
-                        <h3>Contacto</h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>San Blas 30, B1631LCB Villa Rosa, Provincia de Buenos Aires</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <span>+54 9 11 7203-8801 (Yesica)</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <span>+54 9 11 3854-9967 (Mariela)</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <span>gestiones.gonzaleztapia@gmail.com</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-clock"></i>
-                                <span>Lun-Sáb: 9:00 - 18:00</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <a href="https://www.sacksverse.com.ar/">&copy; SacksVerse. Todos los derechos reservados.</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+   {% endblock %}
