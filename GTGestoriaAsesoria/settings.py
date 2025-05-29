@@ -26,9 +26,11 @@ SECRET_KEY = 'django-insecure-isuau3rove&!$jooz%a*nuztkb*yx)gi9zq+t8jn91_!)c#deo
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://gt-gestoria-asesoria.com.ar',
     'gt-gestoria-asesoria.com.ar',
+    'www.gt-gestoria-asesoria.com.ar',  # opcional, si lo usás
+    '18.119.109.133',  # opcional para pruebas con IP directa
 ]
+
 
 CSRF_TRUSTED_ORIGINS = [
     'https://gt-gestoria-asesoria.com.ar',
