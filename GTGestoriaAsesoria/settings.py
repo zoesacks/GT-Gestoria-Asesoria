@@ -29,6 +29,8 @@ ALLOWED_HOSTS = [
     'gt-gestoria-asesoria.com.ar',
     'www.gt-gestoria-asesoria.com.ar',  # opcional, si lo usás
     '18.119.109.133',  # opcional para pruebas con IP directa
+    'localhost',
+    '127.0.0.1'
 ]
 
 
