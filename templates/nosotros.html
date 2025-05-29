@@ -1,42 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - G|T Gestiones Inmobiliarias</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <div class="logo-icon">G|T</div>
-                <div class="logo-text">
-                    <span class="logo-title">Gonzalez - Tapia</span>
-                    <span class="logo-subtitle">GESTORIA - ASESORIA</span>
-                </div>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="nosotros.html" class="active">Nosotros</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+{% extends 'index.html' %}
+{%load static%}
+
+{% block links%}
+    <li><a href="{% url 'home' %}">Inicio</a></li>
+    <li><a href="{% url 'servicios' %}">Servicios</a></li>
+    <li><a href="{% url 'nosotros' %}" class="active">Nosotros</a></li>
+    <li><a href="{% url 'cursos' %}">Cursos</a></li>
+    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+{% endblock %}
+
+{% block content %}
 
     <!-- About Hero Section -->
     <section class="about-hero">
@@ -48,7 +21,7 @@
                     <p>Desde 2020 brindamos soluciones integrales en gestiones administrativas, catastrales e inmobiliarias con la máxima eficiencia y dedicación.</p>
                 </div>
                 <div class="about-hero-image">
-                    <img src="img/nosotros.jpeg" alt="Equipo de Gestiones Inmobiliarias">
+                    <img src="{% static 'img/nosotros.jpeg' %}" alt="Equipo de Gestiones Inmobiliarias">
                     <div class="about-hero-badge">
                         <span>15+</span>
                         <p>Años de experiencia</p>
@@ -63,7 +36,7 @@
         <div class="container">
             <div class="our-story-content">
                 <div class="our-story-image">
-                    <img src="img/logo.png" alt="Nuestra historia">
+                    <img src="{% static 'img/logo.png' %}" alt="Nuestra historia">
                 </div>
                 <div class="our-story-text">
                     <div class="section-subtitle">Nuestra historia</div>
@@ -189,7 +162,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img src="img/yesica.jpeg" alt="Yesica">
+                        <img src="{% static 'img/yesica.jpeg' %}" alt="Yesica">
                         <div class="team-social">
                             <a href="https://wa.me/5491172038801" class="team-social-icon"><i class="fab fa-whatsapp"></i></a>
                         </div>
@@ -199,14 +172,61 @@
                         <span class="team-position">Gestora - Estudiante de Abogacía</span>
                         <p>Con 5 años de experiencia en el rubro, me especializo en gestiones de automotor, impuestos, jubilaciones, Veraz e internacionales.</p>
                         <p>Me caracteriza la sinceridad, la empatía y el compromiso con cada cliente. Mi objetivo es despejar todas sus dudas, brindar confianza y asegurarme de que se sientan conformes y satisfechos con cada gestión.</p>
-                        <p><strong>Cursos realizados:</strong> Gestoría Automotor, Gestoría de Impuestos, Gestoría en Jubilaciones, Gestoría en Veraz, Gestoría Internacional.</p>
+                        
+                        <br>
+                        <span class="team-position">Cursos realizados</span>
+                        <div class="accordion-certificados">
+
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h4>Gestión de trámite VERAZ</h4>
+                                    <button class="accordion-header">Ver</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <img src="{% static 'img/CursoVerazYesica.jpg' %}" alt="Certificado Automotor" class="certificado-img">
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h4>Gestión de Infracciones de Tránsito</h4>
+                                    <button class="accordion-header">Ver</button>
+                                </div>
+                                <div class="accordion-body">
+                                    <img src="{% static 'img/CursoTransitoYesica.jpg' %}" alt="Certificado Impuestos" class="certificado-img">
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h4>Gestoría de Impuestos(AFIP)</h4>
+                                    <!-- <button class="accordion-header">Ver</button> -->
+                                </div>
+                                <!-- <div class="accordion-body">
+                                    <img src="{% static 'img/CursoTransitoYesica.jpg' %}" alt="Certificado Impuestos" class="certificado-img">
+                                </div> -->
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-title">
+                                    <h4>Gestoría Internacional</h4>
+                                    <!-- <button class="accordion-header">Ver</button> -->
+                                </div>
+                                <!-- <div class="accordion-body">
+                                    <img src="{% static 'img/CursoTransitoYesica.jpg' %}" alt="Certificado Impuestos" class="certificado-img">
+                                </div> -->
+                            </div>
+
+                            
+                        </div>
                     </div>
+
                 </div>
 
                 
                 <div class="team-member">
                     <div class="team-member-image">
-                        <img src="img/mariela.jpeg" alt="Mariela">
+                        <img src="{% static 'img/mariela.jpeg' %}" alt="Mariela">
                         <div class="team-social">
                             <a href="https://wa.me/5491138549967" class="team-social-icon"><i class="fab fa-whatsapp"></i></a>
                         </div>
@@ -393,7 +413,7 @@
                 </div>
 
                 <div class="why-choose-image">
-                    <img src="img/nosotros.jpeg" alt="¿Por qué elegirnos?">
+                    <img src="{% static 'img/nosotros.jpeg' %}" alt="¿Por qué elegirnos?">
                     <div class="why-choose-badge">
                         <span>100%</span>
                         <p>Satisfacción garantizada</p>
@@ -403,106 +423,22 @@
         </div>
     </section>
 
-    <!-- CTA Section 
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <div class="cta-text">
-                    <h2>¿Quieres conocernos mejor?</h2>
-                    <p>Agenda una reunión con nuestro equipo y descubre cómo podemos ayudarte.</p>
-                </div>
-                <div class="cta-buttons">
-                    <a href="contacto.html" class="btn btn-light">Contactar ahora</a>
-                    <a href="tel:+541145678901" class="btn btn-outline-light">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>+54 11 4567-8901</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-about">
-                        <div class="footer-logo">
-                            <div class="logo-icon">G|T</div>
-                            <div class="logo-text">
-                                <span class="logo-title">Gonzalez - Tapia</span>
-                                <span class="logo-subtitle">GESTORIA - ASESORIA</span>
-                            </div>
-                        </div>
-                        <p>Somos un equipo de profesionales especializadas en gestiones y trámites administrativos, catastrales e inmobiliarios.</p>
-                        <div class="footer-social">
-                            <!-- <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a> -->
-                            <a href="https://www.instagram.com/gestiones.gonzalez.tapia?igsh=MW4ycjEzbmhleG93YQ==" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="https://wa.me/5491172038801" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="footer-links">
-                        <h3>Enlaces rápidos</h3>
-                        <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="servicios.html">Servicios</a></li>
-                            <li><a href="nosotros.html">Nosotros</a></li>
-                            <li><a href="cursos.html">Cursos</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-services">
-                        <h3>Servicios</h3>
-                        <ul>
-                            <li><a href="servicios.html#afip">Trámites AFIP</a></li>
-                            <li><a href="servicios.html#automotor">Trámites Automotor</a></li>
-                            <li><a href="servicios.html#catastrales">Trámites Catastrales</a></li>
-                            <li><a href="servicios.html#internacionales">Trámites Internacionales</a></li>
-                            <li><a href="servicios.html#municipales">Trámites Municipales</a></li>
-                            <li><a href="servicios.html#jubilaciones">Jubilaciones y Pensiones</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-contact">
-                        <h3>Contacto</h3>
-                        <ul>
-                            <li>
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>San Blas 30, B1631LCB Villa Rosa, Provincia de Buenos Aires</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <span>+54 9 11 7203-8801 (Yesica)</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-phone-alt"></i>
-                                <span>+54 9 11 3854-9967 (Mariela)</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope"></i>
-                                <span>gestiones.gonzaleztapia@gmail.com</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-clock"></i>
-                                <span>Lun-Sáb: 9:00 - 18:00</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="container">
-                <a href="https://www.sacksverse.com.ar/">&copy; SacksVerse. Todos los derechos reservados.</a>
-            </div>
-        </div>
-    </footer>
+{% endblock %}
 
-    <script src="script.js"></script>
-</body>
-</html>
+{% block extra_scripts %}
+<script>
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const allItems = document.querySelectorAll('.accordion-item');
+            allItems.forEach(item => {
+                if (!item.contains(button)) {
+                    item.classList.remove('active');
+                }
+            });
+            const accordionItem = button.closest('.accordion-item');
+            accordionItem.classList.toggle('active');
+        });
+    });
+</script>
+
+{% endblock %}
