@@ -23,10 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-isuau3rove&!$jooz%a*nuztkb*yx)gi9zq+t8jn91_!)c#deo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://gt-gestoria-asesoria.com.ar',
+    'gt-gestoria-asesoria.com.ar',
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://gt-gestoria-asesoria.com.ar',
+]
 
 # Application definition
 
@@ -51,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'GTGestoriaAsesoria.urls'
@@ -118,16 +125,24 @@ TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+if DEBUG == True:
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
+else:
+    STATIC_ROOT = '/home/ubuntu/aplicaciones/GT-Gestoria-Asesoria/static/'
 
-# Ruta absoluta donde se guardarán los archivos subidos
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "staticfiles"),
+]
+
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / "media"
+if DEBUG == True:
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+else:
+    MEDIA_ROOT = '/home/ubuntu/aplicaciones/GT-Gestoria-Asesoria/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
