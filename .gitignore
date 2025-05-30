@@ -5,3 +5,8 @@ migrations/
 venv/
 app/__pycache__/
 staticfiles/
+
+static/admin/
+static/import_export/
+static/jazzmin/
+static/vendor
