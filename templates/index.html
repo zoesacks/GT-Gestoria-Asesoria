@@ -4,14 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G|T Soluciones profesionales para tus trámites</title>
+    
+    <!-- SEO básico -->
+    <title>G|T - Soluciones profesionales para tus trámites</title>
+    <meta name="description" content="G|T es una gestoría profesional en Argentina que ofrece soluciones ágiles y personalizadas para tus trámites. ¡Conocé nuestros servicios!">
+    <meta name="keywords" content="gestoría, trámites, asesoría, Argentina, soluciones legales, profesionales">
+    <meta name="author" content="G|T Soluciones">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1Hg0cxy2AoSTyoQeH70JFrfRZyKX4kKO1jD+QhZ0kqLbT3qgGvMUL6hNNM8G6oZ+gW8yA7flU8czT6Yt7dA8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="G|T - Soluciones profesionales para tus trámites">
+    <meta property="og:description" content="Gestoría integral para todo tipo de trámites. Atención profesional, rápida y personalizada.">
+    <meta property="og:image" content="{% static 'img/logo.png' %}">
+    <meta property="og:url" content="https://gt-gestoria-asesoria.com.ar/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="G|T - Soluciones profesionales para tus trámites">
+    <meta name="twitter:description" content="Gestoría profesional y asesoría legal en Argentina. Te ayudamos con tus trámites.">
+    <meta name="twitter:image" content="{% static 'img/logo.png' %}">
+
     {% block extra_head %}{% endblock %}
 </head>
+
 <body>
     <!-- Header -->
     <header>
